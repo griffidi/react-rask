@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["api/src/**/*.ts", "apps/*/src/**/*.ts", "packages/*/src/**/*.ts"],
+  "exclude": [
+    "**/.cache/**/*",
+    "**/.next/**/*",
+    "**/build/**/*",
+    "**/dist/**/*",
+    "**/node_modules/**/*",
+    ".out/**/*"
+  ]
+}

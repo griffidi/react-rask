@@ -1,0 +1,42 @@
+{
+  "name": "react-rask",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Dustin Griffith",
+    "email": "dustingriffith@outlook.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/griffidi/react-rask.git"
+  },
+  "packageManager": "pnpm@8.6.0",
+  "engines": {
+    "node": ">=20.9",
+    "pnpm": ">=8.6.0"
+  },
+  "type": "module",
+  "workspaces": [
+    "apis/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^20",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5"
+  }
+}

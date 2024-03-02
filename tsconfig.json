@@ -1,0 +1,10 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "./tsconfig.base.json",
+  "files": [],
+  "compileOnSave": false,
+  "compilerOptions": {
+    "module": "ES2022"
+  },
+  "references": [{ "path": "./apis/node-api" }, { "path": "./apps/demo" }]
+}
