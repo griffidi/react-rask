@@ -3,6 +3,9 @@ import parser from '@typescript-eslint/parser';
 import eslint from 'eslint';
 import prettier from 'eslint-config-prettier';
 import prettierPlugin from 'eslint-plugin-prettier';
+import webVitals from 'next/core-web-vitals';
+import reactJest from 'reach-app/jest';
+import react from 'react-app';
 
 const sharedPlugins = {
   ts,
@@ -16,7 +19,6 @@ const sharedBrowserGlobals = {
 };
 
 const sharedRules = {
-  // 'next/core-web-vitals',
   ...eslint['recommended'],
   ...ts.rules['stylistic-type-checked'],
   ...ts.rules['strict-type-checked'],
@@ -37,6 +39,12 @@ const sharedRules = {
   ],
 };
 
+const sharedAppRules = {
+  ...react,
+  ...reactJest,
+  ...webVitals,
+};
+
 const sharedNodeGlobals = {
   browser: 'readonly',
   node: 'writable',
@@ -53,7 +61,7 @@ const appConfig = {
   },
 };
 
-const libConfig = {
+const packagesConfig = {
   plugins: {
     ...sharedPlugins,
   },
