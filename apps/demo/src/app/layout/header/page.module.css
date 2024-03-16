@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  block-size: 80px;
+  inline-size: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  inline-size: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+}

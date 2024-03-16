@@ -111,6 +111,7 @@
     "npm.packageManager": "pnpm",
 
     "files.exclude": {
+      ".next": true,
       ".out": true,
       "api": true,
       "apps": true,
