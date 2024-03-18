@@ -5,12 +5,8 @@
       "name": ".root",
     },
     {
-      "name": "dotnet-api",
-      "path": "apis/dotnet-api",
-    },
-    {
-      "name": "node-api",
-      "path": "apis/node-api",
+      "name": "api",
+      "path": "api",
     },
     {
       "name": "demo",
@@ -18,6 +14,17 @@
     },
   ],
   "settings": {
+    "csharp.format.enable": false,
+    "[csharp]": {
+      "editor.defaultFormatter": "ms-dotnettools.csharp",
+      "editor.formatOnSave": true,
+      "editor.tabSize": 4,
+    },
+    "omnisharp.useModernNet": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    // "omnisharp.useEditorFormattingSettings": true,
+    "omnisharp.sdkVersion": "8.0.203",
+    "omnisharp.organizeImportsOnFormat": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "javascript.format.enable": false,
     "javascript.preferences.importModuleSpecifier": "project-relative",
@@ -119,6 +126,8 @@
       "**/.git": true,
       "**/dist": true,
       "**/node_modules": true,
+      "**/obj": true,
+      "**/bin": true,
     },
 
     "workbench.iconTheme": "vscode-icons",
@@ -129,8 +138,8 @@
       {
         "previewLimit": 50,
         "driver": "SQLite",
-        "name": "sqlite",
-        "database": "${workspaceFolder:api}/prisma/dev.db",
+        "name": "dev.db",
+        "database": "C:\\Users\\dgriffith\\AppData\\Local\\dev.db",
       },
     ],
     "sqltools.useNodeRuntime": true,

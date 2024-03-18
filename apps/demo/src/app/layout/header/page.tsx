@@ -1,7 +1,14 @@
 'use client';
 
-import { Button, Tooltip } from '@fluentui/react-components';
-import { MoreVertical24Filled } from '@fluentui/react-icons';
+import {
+  Button,
+  Menu,
+  MenuItem,
+  MenuList,
+  MenuPopover,
+  MenuTrigger,
+} from '@fluentui/react-components';
+import { LockOpenFilled, MoreVertical24Filled, PersonSettingsFilled } from '@fluentui/react-icons';
 import styles from './page.module.css';
 
 export default function Header() {
@@ -13,16 +20,24 @@ export default function Header() {
           href="/">
           rask
         </a>
-        <Tooltip
-          content="Account options"
-          relationship="label">
+      </nav>
+
+      <Menu>
+        <MenuTrigger disableButtonEnhancement>
           <Button
             appearance="transparent"
             size="small"
             icon={<MoreVertical24Filled />}
           />
-        </Tooltip>
-      </nav>
+        </MenuTrigger>
+
+        <MenuPopover>
+          <MenuList>
+            <MenuItem icon={<PersonSettingsFilled />}>Profile</MenuItem>
+            <MenuItem icon={<LockOpenFilled />}>Logout</MenuItem>
+          </MenuList>
+        </MenuPopover>
+      </Menu>
     </header>
   );
 }

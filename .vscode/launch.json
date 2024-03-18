@@ -4,21 +4,41 @@
   "configurations": [
     {
       "name": "Debug api",
-      "cwd": "${workspaceFolder}/api",
+      "type": "coreclr",
       "request": "launch",
-      "type": "node-terminal",
-      "command": "pnpm run dev",
-      "skipFiles": ["<node_internals>/**"],
-      "sourceMaps": true,
-      "outFiles": ["${workspaceFolder}/api/dist/**", "!**/node_modules/**"],
-      "resolveSourceMapLocations": ["${workspaceFolder}/api/dist/**", "!**/node_modules/**"],
-      "presentation": {
-        "hidden": false,
-        "group": "api",
-        "order": 1
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/api/Rask.Api/bin/Debug/net8.0/Rask.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/api/Rask.Api",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
       },
-      "smartStep": true,
-      "enableTurboSourcemaps": true
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "sourceFileMap": {
+        "/Views": "${workspaceFolder}/Views"
+      }
+    },
+    {
+      "name": "Debug api (edge)",
+      "type": "coreclr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "${workspaceFolder}/api/Rask.Api/bin/Debug/net8.0/Rask.Api.dll",
+      "args": [],
+      "cwd": "${workspaceFolder}/api/Rask.Api",
+      "stopAtEntry": false,
+      "serverReadyAction": {
+        "action": "debugWithEdge",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)",
+        "killOnServerStop": true
+      },
+      "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     },
     {
       "name": "Debug demo server",
@@ -54,7 +74,6 @@
         "order": 2
       }
     },
-
     {
       "name": "Debug demo (chrome)",
       "type": "chrome",
@@ -79,7 +98,7 @@
   "compounds": [
     {
       "name": "Launch demo (edge)",
-      "configurations": ["Debug demo server", "Debug demo (edge)"],
+      "configurations": ["Debug api", "Debug demo server", "Debug demo (edge)"],
       "stopAll": true
     },
     {
