@@ -20,6 +20,11 @@
       },
       "sourceFileMap": {
         "/Views": "${workspaceFolder}/Views"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "demo",
+        "order": 1
       }
     },
     {
@@ -38,6 +43,11 @@
       },
       "env": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "presentation": {
+        "hidden": false,
+        "group": "demo",
+        "order": 1
       }
     },
     {
@@ -51,7 +61,7 @@
       "presentation": {
         "hidden": false,
         "group": "demo",
-        "order": 1
+        "order": 2
       }
     },
     {
@@ -71,7 +81,7 @@
       "presentation": {
         "hidden": false,
         "group": "demo",
-        "order": 2
+        "order": 3
       }
     },
     {
@@ -91,19 +101,19 @@
       "presentation": {
         "hidden": false,
         "group": "demo",
-        "order": 2
+        "order": 3
       }
     }
   ],
   "compounds": [
     {
       "name": "Launch demo (edge)",
-      "configurations": ["Debug api", "Debug demo server", "Debug demo (edge)"],
+      "configurations": ["Debug api (edge)", "Debug demo server", "Debug demo (edge)"],
       "stopAll": true
     },
     {
       "name": "Launch demo (chrome)",
-      "configurations": ["Debug api", "Debug demo server", "Debug demo (chrome)"],
+      "configurations": ["Debug api (edge)", "Debug demo server", "Debug demo (chrome)"],
       "stopAll": true
     }
   ]
